@@ -1,14 +1,13 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 "use client";
 
 import { useEffect, useState, useRef } from "react";
 import { AnimatePresence } from "framer-motion";
 import "locomotive-scroll/dist/locomotive-scroll.css";
-import Hero from "@/components/sections/home/Hero";
 import Preloader from "@/components/ui/Preloader";
 import Navbar from "@/components/ui/Navbar";
-import About from "@/components/sections/home/About";
 
-export default function Home() {
+const page = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -23,7 +22,6 @@ export default function Home() {
       }, 2000);
     })();
   }, []);
-
   return (
     <div>
       <Navbar />
@@ -31,20 +29,20 @@ export default function Home() {
         {isLoading && (
           <Preloader
             words={[
-              "Hello",
-              "Bonjour",
-              "Ciao",
-              "Olà",
-              "やあ",
-              "Hallo",
-              "Guten tag",
-              "Salut",
+              "Contact me", // English
+              "Contactez-moi", // French
+              "Contattami", // Italian
+              "Contate-me", // Portuguese
+              "お問い合わせ", // Japanese
+              "Kontaktiere mich", // German
+              "Contactează-mă", // Romanian
+              "Contactează-mă", // Romanian (for "Salut")
             ]}
           />
         )}
       </AnimatePresence>
-      <Hero />
-      <About/>
     </div>
   );
-}
+};
+
+export default page;
