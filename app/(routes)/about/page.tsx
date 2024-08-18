@@ -36,11 +36,11 @@ const page = () => {
               "私について", // Japanese
               "Über mich", // German
               "Despre mine", // Romanian
-              "Despre mine", // Romanian (for "Salut")
             ]}
           />
         )}
       </AnimatePresence>
+      <div className="h-[3000px] w-full justify-center items-center text-center font-bold text-6xl">About</div>
     </div>
   );
 };

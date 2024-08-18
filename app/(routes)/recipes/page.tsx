@@ -36,11 +36,11 @@ const page = () => {
               "レシピ", // Japanese
               "Rezepte", // German
               "Rețete", // Romanian
-              "Rețete", // Romanian (for "Salut")
             ]}
           />
         )}
       </AnimatePresence>
+      <div className="h-[3000px] w-full justify-center items-center text-center font-bold text-6xl">Recipes</div>
     </div>
   );
 };

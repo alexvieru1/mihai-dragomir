@@ -36,11 +36,11 @@ const page = () => {
               "お問い合わせ", // Japanese
               "Kontaktiere mich", // German
               "Contactează-mă", // Romanian
-              "Contactează-mă", // Romanian (for "Salut")
             ]}
           />
         )}
       </AnimatePresence>
+      <div className="h-[3000px] w-full justify-center items-center text-center font-bold text-6xl">Contact</div>
     </div>
   );
 };
