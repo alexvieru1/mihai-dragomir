@@ -8,7 +8,7 @@ const About = () => {
   return (
     <div className="flex 4xs:flex-col lg:flex-row justify-around 4xs:mt-10 md:mt-20 lg:mt-32 overflow-hidden">
       <div className="flex 4xs:flex-col lg:flex-row justify-around 4xs:w-full lg:w-[80%] mt-4 overflow-hidden">
-        <div className="min-h-[70vh] lg:w-[50vw] lg:ml-5 flex flex-col p-10">
+        <div className="min-h-[70vh] lg:w-[50vw] lg:ml-5 flex flex-col p-10 z-[-20]">
           <h6 className="text-lg font-signature text-[#bb835e]">
             Despre mine
           </h6>
@@ -70,8 +70,8 @@ const About = () => {
             </motion.div>
           </div>
         </div>
-        <div className="flex justify-end items-center min-h-[70vh] lg:w-[50vw] lg:mr-5 overflow-hidden">
-          <div className="flex-col justify-start items-start text-end px-5 z-10">
+        <div className="flex justify-end items-center min-h-[70vh] lg:w-[50vw] lg:mr-5 overflow-hidden z-[-20]">
+          <div className="flex-col justify-start items-start text-end px-5">
             <motion.div
               className="border-[#f7e1a7] border-8"
               initial={{ opacity: 0, x: -100 }} // Reduced the initial x offset
