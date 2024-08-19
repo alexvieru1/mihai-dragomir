@@ -73,7 +73,7 @@ const About = () => {
         <div className="flex justify-end items-center min-h-[70vh] lg:w-[50vw] lg:mr-5 overflow-hidden">
           <div className="flex-col justify-start items-start text-end px-5 z-[-20]">
             <motion.div
-              className="border-[#f7e1a7] border-8"
+              className="border-[#f7e1a7] border-8 z-[-19]"
               initial={{ opacity: 0, x: -100 }} // Reduced the initial x offset
               whileInView={{
                 opacity: 1,
@@ -116,7 +116,7 @@ const About = () => {
               transition: { duration: 1, delay: 2 },
             }}
             viewport={{ once: true }}
-            className="overflow-hidden z-[-19]" // Added overflow-hidden to contain the image within bounds
+            className="overflow-hidden" // Added overflow-hidden to contain the image within bounds
           >
             <Image
               src="/images/tomahawk.webp"
