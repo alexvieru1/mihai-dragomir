@@ -71,7 +71,7 @@ const About = () => {
           </div>
         </div>
         <div className="flex justify-end items-center min-h-[70vh] lg:w-[50vw] lg:mr-5 overflow-hidden">
-          <div className="flex-col justify-start items-start text-end px-5">
+          <div className="flex-col justify-start items-start text-end px-5 z-[-20]">
             <motion.div
               className="border-[#f7e1a7] border-8 z-[-19]"
               initial={{ opacity: 0, x: -100 }} // Reduced the initial x offset
