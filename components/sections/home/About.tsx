@@ -90,7 +90,7 @@ const About = () => {
               />
             </motion.div>
             <motion.div
-              className="p-2 border-[#f7e1a7] border-8"
+              className="p-2"
               initial={{ opacity: 0 }}
               whileInView={{
                 opacity: 1,
@@ -116,7 +116,7 @@ const About = () => {
               transition: { duration: 1, delay: 2 },
             }}
             viewport={{ once: true }}
-            className="overflow-hidden" // Added overflow-hidden to contain the image within bounds
+            className="overflow-hidden z-[-19]" // Added overflow-hidden to contain the image within bounds
           >
             <Image
               src="/images/tomahawk.webp"
