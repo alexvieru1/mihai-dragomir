@@ -7,6 +7,8 @@ import Hero from "@/components/sections/home/Hero";
 import Preloader from "@/components/ui/Preloader";
 import Navbar from "@/components/ui/Navbar";
 import About from "@/components/sections/home/About";
+import Recipes from "@/components/sections/home/Recipes";
+import Contact from "@/components/sections/home/Contact";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -45,6 +47,8 @@ export default function Home() {
       </AnimatePresence>
       <Hero />
       <About/>
+      <Recipes/>
+      <Contact/>
     </div>
   );
 }

@@ -10,15 +10,15 @@ import Footer from './Footer';
 
 const navItems = [
   {
-    title: "Home",
+    title: "Acasă",
     href: "/",
   },
   {
-    title: "About",
+    title: "Despre",
     href: "/about",
   },
   {
-    title: "Recipes",
+    title: "Rețete",
     href: "/recipes",
   },
   {

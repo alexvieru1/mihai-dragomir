@@ -42,6 +42,8 @@ const Hero: React.FC = () => {
   const firstText = useRef<HTMLParagraphElement>(null);
   const secondText = useRef<HTMLParagraphElement>(null);
   const slider = useRef<HTMLDivElement>(null);
+  const despreSection = useRef<HTMLElement>(null); // Reference to the target section
+
   let xPercent = 0;
   let direction = -1;
 
@@ -59,6 +61,11 @@ const Hero: React.FC = () => {
     });
     requestAnimationFrame(animate);
   }, []);
+
+  const handleScrollToDespre = () => {
+    const section = document.getElementById("despre");
+    section?.scrollIntoView({ behavior: "smooth" }); // Smooth scroll to the section
+  };
 
   const images = [
     "/images/mihai-dragomir.jpg",
@@ -104,8 +111,11 @@ const Hero: React.FC = () => {
             <motion.p className="font-bold text-xl md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
               Chef Mihai Dragomir
             </motion.p>
-            <button className="px-4 py-2 backdrop-blur-sm border bg-emerald-300/10 border-[#f7e1a7] text-white mx-auto text-center rounded-full relative mt-4">
-              <span>Afla mai mult</span>
+            <button
+              onClick={handleScrollToDespre} // Add the click handler to scroll
+              className="px-4 py-2 backdrop-blur-sm border bg-emerald-300/10 border-[#f7e1a7] text-white mx-auto text-center rounded-full relative mt-4"
+            >
+              <span>Despre mine</span>
               <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-emerald-500 to-transparent" />
             </button>
           </motion.div>

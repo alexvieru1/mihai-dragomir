@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
 import { Timeline } from "@/components/ui/timeline";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const About = () => {
   const data = [
@@ -169,10 +170,11 @@ const About = () => {
     <div id="despre" className="4xs:mt-10 md:mt-20 lg:mt-32">
       <Timeline data={data} />
       <div className="flex justify-center items-center">
-        <button className="px-4 py-2 backdrop-blur-sm border bg-slate-500/50 border-[#f7e1a7] text-white mx-auto text-center rounded-full relative mt-4">
-          <span>Afla mai mult</span>
-          <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-emerald-500 to-transparent" />
-        </button>
+        <Link href="/about">
+          <button className="px-4 py-2 backdrop-blur-sm border bg-[#f7e1a7] border-slate-700 text-slate-700 mx-auto text-center rounded-full relative mt-4">
+            <span>Afla mai mult</span>
+          </button>
+        </Link>
       </div>
     </div>
   );
