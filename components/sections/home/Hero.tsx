@@ -3,6 +3,8 @@ import React, { useRef, useLayoutEffect } from "react";
 import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import { Button } from "@/components/ui/button";
+import { ImagesSlider } from "@/components/ui/images-slider";
 
 const slideUp = {
   initial: {
@@ -58,6 +60,12 @@ const Hero: React.FC = () => {
     requestAnimationFrame(animate);
   }, []);
 
+  const images = [
+    "/images/mihai-dragomir.jpg",
+    "/images/pasta.jpg",
+    "/images/seafood.jpg",
+  ];
+
   const animate = () => {
     if (xPercent < -100) {
       xPercent = 0;
@@ -76,28 +84,33 @@ const Hero: React.FC = () => {
         variants={slideUp}
         initial="initial"
         animate="enter"
-        className="relative flex h-screen overflow-hidden z-[-20]"
+        className="relative flex h-screen overflow-hidden"
       >
-        <Image
-          src="/images/mihai-dragomir.jpg"
-          layout="fill"
-          objectFit="cover"
-          alt="background"
-          className="absolute inset-0 z-0"
-        />
+        <ImagesSlider images={images}>
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: -80,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 0.6,
+            }}
+            className="z-50 flex flex-col justify-center items-center"
+          >
+            <motion.p className="font-bold text-xl md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
+              Chef Mihai Dragomir
+            </motion.p>
+            <button className="px-4 py-2 backdrop-blur-sm border bg-emerald-300/10 border-[#f7e1a7] text-white mx-auto text-center rounded-full relative mt-4">
+              <span>Afla mai mult</span>
+              <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-emerald-500 to-transparent" />
+            </button>
+          </motion.div>
+        </ImagesSlider>
       </motion.main>
-
-      <motion.div
-        className="relative mx-auto text-center 4xs:mt-[-430px] md:mt-[-400px] lg:mt-[-300px] w-[80%] bg-white bg-opacity-90 text-black p-8 border-4 border-[#f7e1a7] z-[-20]"
-        variants={textReveal}
-        initial="hidden"
-        animate="visible"
-      >
-        <h2 className="text-4xl font-signature mb-4">Chef Mihai Dragomir</h2>
-        <p className="text-lg mb-4">
-          Celebrated Culinary Maestro - Award-Winning Chef and Gourmet Specialist
-        </p>
-      </motion.div>
     </div>
   );
 };
